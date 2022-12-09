@@ -1,0 +1,17 @@
+type Mutation {
+  "Increment the number of views of a given track, when the track card is clicked"
+  incrementTrackViews(id: ID!): IncrementTrackViewsResponse!
+}
+
+type IncrementTrackViewsResponse {
+  "Similar to HTTP status code, represents the status of the mutation"
+  status: Int!
+  "Similar to HTTP status code message, represents the status of the mutation"
+  statusText: String!
+  "Human-readable message for the UI"
+  body: String!
+  "Base URL from data source"
+  url: String!
+  "Track response after mutation"
+  track: Track
+}
